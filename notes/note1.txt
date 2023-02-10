@@ -1,0 +1,12 @@
+CMakeLists.txt is the file that CMake uses in order to build program
+cmake_minumum_required is usuall going to be around 3.16 *per 2_3_2023
+
+Geant4 seems to be an object oriented program similar to java
+there is a UI component and a general run component to the program
+"runManager->Initialize()" is the command that gives error messages
+
+Initial thoughts on GEANT4:
+	allows for complex simulations and a 3D view on particles
+	Main gun that shoots particles, I think called "beamOn"
+	allows one to create various shapes, shapes within shapes
+	Can get material composition with "listMaterials"

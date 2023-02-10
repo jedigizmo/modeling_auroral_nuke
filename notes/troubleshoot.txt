@@ -1,0 +1,19 @@
+Most commands need to be run with "sudo" in order to give the command the right permissions to do the job
+
+-----break---break----break---break---break
+
+if CMake Error in finding packages found, edit the CMakeLists.txt by adding the following command before if statement
+
+set(Geant4_Dir "/home/pane/modeling-auroral-nuke/GEANT4/geant4-v11.1.0-install/lib/cmake/Geant4")
+
+This commmand sets the "Geant4_DIR" to the source for the package config file so that CMake knows where to find it.
+
+----break----break----break----break----break
+
+if there is an error while loading shared libraries like "libg4graphics-reps.so"
+
+Then edit .bashrc file by appending "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/pane/modeling-auroral-nuke/GEANT4/geant4-v11.1.0-install/lib/"
+
+This will set the environment variables so that GEANT4 will now know where to find the shared libraries.
+
+----break---break---break--break--break
