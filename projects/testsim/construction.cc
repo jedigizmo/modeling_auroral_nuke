@@ -24,7 +24,14 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 	G4Box *solidWorld = new G4Box("solidWorld", 1*m, 1*m, 1*m);
 
-	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, atomicOAir,"logicWorld");
+	G4ThreeVector posm(0.5,0,0.5);
+        G4MagneticField *mag = new G4UniformMagField(posm);
+
+        G4FieldManager* fieldMgr = G4TransportationManager::GetTransportationManager() -> GetFieldManager();
+        fieldMgr -> SetDetectorField(mag);
+
+
+        G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, atomicOAir,"logicWorld", fieldMgr);
 
 	G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.), logicWorld, "physWorld", 0, false, 0, true);
 
