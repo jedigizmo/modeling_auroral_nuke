@@ -12,6 +12,10 @@
 #include "G4Element.hh"
 #include "G4Material.hh"
 #include "G4UnitsTable.hh"
+#include "G4UniformMagField.hh"
+#include "G4PhysicalConstants.hh"
+#include "G4FieldManager.hh"
+#include "G4TransportationManager.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
