@@ -7,9 +7,9 @@ Researchers: CDT Catherine Brodsky '26, CDT Gikonyo Njendu '26
 
 Current Status of project: Building own simulation with GEANT4 + Academic Reading
 
-Status: Creating 1m^3 cube with atomic oxygen at certain density in order to shoot a single electron through ~ (fixing atmospheric composition to get right amount of oxygen + visibility) & Adding Uniform Magnetic Field Lines coming from the top
+Status: Extract numerical data from model, fix compsition + energy, expand model
  
 Create template for building simulations on pane user
-find a way to pop out and run commands on terminal instead of little box in GUI
+Improve skills in C++ to build better code & understand physics behind the model
 
 **Please do not modify, delete or move any of the data in this directory if you are not one of the individuals listed above. Please and Thank you.**
