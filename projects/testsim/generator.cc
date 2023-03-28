@@ -18,8 +18,8 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 	G4String particleName="electron";
 	G4ParticleDefinition *particle = particleTable->FindParticle("e-");
 	
-	G4ThreeVector pos(0.,0.,0.);
-	G4ThreeVector mom(0.,0.,1.);
+	G4ThreeVector pos(0. *m ,0. *m ,1. *m);
+	G4ThreeVector mom(0.,0.,-1.);
 
 	fParticleGun->SetParticlePosition(pos);
 	fParticleGun->SetParticleMomentumDirection(mom);
@@ -28,5 +28,4 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 
 	fParticleGun->GeneratePrimaryVertex(anEvent);
 }
-
 
