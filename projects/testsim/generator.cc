@@ -19,7 +19,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 	G4ParticleDefinition *particle = particleTable->FindParticle("e-");
 	
 	G4ThreeVector pos(0. *m ,0. *m ,1. *m);
-	G4ThreeVector mom(0.,0.,-1.);
+	G4ThreeVector mom(0.,-1.,-1.);
 
 	fParticleGun->SetParticlePosition(pos);
 	fParticleGun->SetParticleMomentumDirection(mom);
