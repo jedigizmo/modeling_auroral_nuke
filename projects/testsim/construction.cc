@@ -19,13 +19,18 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	pressure = 50. *atmosphere;
 	temperature = 325. *kelvin;
 	G4Material* atomicOAir = new G4Material(name="Atomic_Air",density, ncomponents=1, kStateGas,  temperature, pressure);
-	atomicOAir->AddElement(elO, natoms=1);	
+	atomicOAir->AddElement(elO, natoms=1);
+
 	//G4Material *worldMat = nist->FindOrBuildMaterial("G4_AIR");
+	G4double dens = 1e-25 *g/cm3;
+	G4Material * Vacuum = new G4Material("Vacuum", dens, 1);
+	G4Element * elN = new G4Element(name="Nitrogen", symbol="N", meanProtons= 7., 14.01*g/mole);
+	Vacuum -> AddElement(elN, 1);
 
 	G4Box *solidWorld = new G4Box("solidWorld", 1*m, 1*m, 1*m);
 	
 	
-	G4ThreeVector posm(0,-0.5,0);
+	G4ThreeVector posm(0,0,-25e-6*tesla);
 	G4MagneticField *mag = new G4UniformMagField(posm);
 
 	G4FieldManager* fieldMgr = G4TransportationManager::GetTransportationManager() -> GetFieldManager();
@@ -34,7 +39,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 //fieldMgr->GetChordFinder()->SetDeltaChord(0.1);
 
 
-	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, atomicOAir,"logicWorld", fieldMgr);
+	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, atomicOAir, "logicWorld", fieldMgr);
 
 	G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.), logicWorld, "physWorld", 0, false, 0, true);
 
