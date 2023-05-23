@@ -39,7 +39,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 //fieldMgr->GetChordFinder()->SetDeltaChord(0.1);
 
 
-	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, atomicOAir, "logicWorld", fieldMgr);
+	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, Vacuum, "logicWorld", fieldMgr);
 
 	G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.), logicWorld, "physWorld", 0, false, 0, true);
 
