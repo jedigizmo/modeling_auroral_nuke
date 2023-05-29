@@ -15,8 +15,11 @@ The play button allows you to run an event and the command line within the GUI a
 
 ### Step by step for the PC in BH168
 Open up the terminal
+
 Navigate to /home/pane/modeling-auroral-nuke/GEANT4/geant4-v11.1.0/projects/cylinder/build/
+
 Run this command "./testsim"
+
 Press the green play button at the top of the GUI
 
 
