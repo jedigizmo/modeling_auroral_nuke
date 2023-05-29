@@ -2,9 +2,9 @@
 This is a step by step description on how to compile and excute a single example within GEANT4.
 
 ### Prerequisites 
-You make either start your own project or use an example provided by CERN (eg. A1, B1)
+You may either start your own project or use an example provided by CERN (eg. A1, B1)
 Ensure you have created a makefile, and used make to build and install the program.
-Using make should give you an executable to run. 
+After using make, you should get an executable to run simulation.
 
 ### Running the example
 Navigate to the directory with the executable, then execute the executable.
