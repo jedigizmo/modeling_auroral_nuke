@@ -14,13 +14,13 @@ You should be able to rotate the volume 360&deg;.
 The play button allows you to run an event and the command line within the GUI allows you to make modifications in realtime.
 
 ### Step by step for the PC in BH168
-Open up the terminal
+Open up the terminal.
 
 Navigate to /home/pane/modeling-auroral-nuke/GEANT4/geant4-v11.1.0/projects/cylinder/build/
 
 Run this command "./testsim"
 
-Press the green play button at the top of the GUI
+Press the green play button at the top of the GUI.
 
 
 
